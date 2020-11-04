@@ -10,6 +10,7 @@ TOKEN = environ["API_KEY"]
 
 n = ['anishkasi', 'Wolfinthehouse', 'pindabc', 'aprbhd', 'the_week', 'JakeSuli', 'gopuman', 'akshara', 'greybeard278', 'Dobby']
 
+
 weights = {
         'anishkasi': 2.3 + 0.81*3,
         'Wolfinthehouse': 3.5 + 0.86*3,
