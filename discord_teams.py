@@ -2,6 +2,8 @@ import discord
 import re
 import numpy as np
 from itertools import combinations
+import os
+from os import environ
 
 pattern = "\$cleps [0-9]"
 TOKEN = environ["API_KEY"]
