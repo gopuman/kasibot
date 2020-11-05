@@ -86,7 +86,7 @@ async def on_message(message):
             output.append(conc)
         msg1 = "You can refer to the members using any one of these: \n\n"
         msg2 = " ".join(output)
-        msg3 = "~~~~ Made by Anish Kasi ~~~~"
+        msg3 = "##~~ Made by Anish Kasi ~~##"
         msg = msg1+msg2+msg3
         await message.channel.send(msg) 
     z = re.findall(pattern,message.content)
