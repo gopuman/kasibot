@@ -13,7 +13,7 @@ nicknames = {
         'anishkasi': set(['kasi','anishkasi','kass','kmaams','lebron']),
         'Wolfinthehouse': set(['neil','pratith','juice','Wolfinthehouse','neilesh','benadryl']),
         'pindabc': set(['pinds','yogesh','dips','pindabc','upsc']),
-        'aprbhd' : set(['apar','jose','aprbhd','apr','appameya']),
+        'aprbhd' : set(['apar','jose','aprbhd','apr']),
         'the_week' : set(['aveek','tupperware','shelly','the_week','pt','anxx']),
         'JakeSuli' : set(['arvi','ssr','ronnie','jakesuli']),
         'gopuman': set(['gops','chilly','gopuman']),
@@ -79,16 +79,6 @@ def online_members(message):
     
 @client.event
 async def on_message(message):
-    if(message.content == "help"):
-        output = []
-        for key,value in nicknames.items():
-            conc = key.capitalize() + ': ' + ', '.join(value) + '\n\n'
-            output.append(conc)
-        msg1 = "You can refer to the members using any one of these: \n\n"
-        msg2 = " ".join(output)
-        msg3 = "~~~~ Made by Anish Kasi ~~~~"
-        msg = msg1+msg2+msg3
-        await message.channel.send(msg) 
     z = re.findall(pattern,message.content)
     if(len(z) > 0):
         split_msg = message.content.split(" ")
