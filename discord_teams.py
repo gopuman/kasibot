@@ -4,6 +4,8 @@ import numpy as np
 from itertools import combinations
 import os
 from os import environ
+import random
+
 
 pattern = "\$cleps [0-9]"
 TOKEN = environ["API_KEY"]
@@ -123,6 +125,15 @@ async def on_message(message):
             else:
                 msg = " ".join(names)
                 await message.channel.send(msg)
+
+@client.event
+async def on_voice_state_update(member, before, after):
+    user = str(member).split("#")[0]
+    s = nicknames[user]
+    channel = client.get_channel(443835387438301196)
+    if before.channel is None and after.channel is not None:
+        await channel.send('Welcome ' + random.choice(tuple(s)))
+
 
 @client.event
 async def on_ready():
