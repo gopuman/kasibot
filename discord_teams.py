@@ -16,7 +16,7 @@ nicknames = {
         'Wolfinthehouse': set(['neil','pratith','juice','Wolfinthehouse','neilesh','benadryl']),
         'pindabc': set(['pinds','yogesh','dips','pindabc','upsc']),
         'aprbhd' : set(['apar','jose','aprbhd','apr','appameya']),
-        'the_week' : set(['aveek','tupperware','shelly','the_week','pt','anxx']),
+        'the_week' : set(['aveek','tupperware','shelly','pt','anxx','telegram','tacobell','tapori']),
         'JakeSuli' : set(['arvi','ssr','ronnie','jakesuli']),
         'gopuman': set(['gops','chilly','gopuman']),
         'akshara': set(['akshara','hak','omg']),
@@ -132,7 +132,7 @@ async def on_voice_state_update(member, before, after):
     s = nicknames[user]
     channel = client.get_channel(443835387438301196)
     if before.channel is None and after.channel is not None:
-        await channel.send('Welcome ' + random.choice(tuple(s)))
+        await channel.send('Welcome, ' + random.choice(tuple(s)).captialize())
 
 
 @client.event
