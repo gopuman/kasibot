@@ -14,7 +14,7 @@ n = ['anishkasi', 'Wolfinthehouse', 'pindabc', 'aprbhd', 'the_week', 'JakeSuli',
 nicknames = {
         'anishkasi': set(['kasi','anishkasi','kass','kmaams','lebron']),
         'Wolfinthehouse': set(['neil','pratith','juice','Wolfinthehouse','neilesh','benadryl']),
-        'pindabc': set(['pinds','yogesh','dips','pindabc','upsc']),
+        'pindabc': set(['pinds','yogesh','dips','pindabc','upsc','nipflix']),
         'aprbhd' : set(['apar','jose','aprbhd','apr','appameya']),
         'the_week' : set(['aveek','tupperware','shelly','pt','anxx','telegram','tacobell','tapori']),
         'JakeSuli' : set(['arvi','ssr','ronnie','jakesuli']),
@@ -100,27 +100,45 @@ async def on_message(message):
         print(names)
         if("-w" in split_msg):
             t1,t2 = create_weighted_team(names,2)
-            msg = " ".join(t1)
-            await message.channel.send(msg)
-            msg = " ".join(t2)
-            await message.channel.send(msg)
+
+            embed = discord.Embed(
+                title = "Weighted Teams Generated\n",
+                colour = discord.Colour.blue()
+                )
+            nl = "\n"
+            embed.add_field(name="__Team A__", value=f"**{nl.join(t1)}**", inline=True)
+            embed.add_field(name="__Team B__", value=f"**{nl.join(t2)}**", inline=True)
+
+            await message.channel.send(embed=embed)
         #onlineMembersCount = len(onlineMembersInServer)
         else:
             numteams = int(z[0][-1])
             np.random.shuffle(names)
             if(numteams == 3):
-                for i in range(3):
-                    msg = names[i*3 : (i+1)*3]
-                    msg = " ".join(msg)
-                    await message.channel.send(msg)
+                msg1 = names[0:3]
+                msg2 = names[3:6]
+                msg3 = names[6:9]
+                embed = discord.Embed(
+                title = "Teams Generated\n",
+                colour = discord.Colour.blue()
+                )
+                nl = "\n"
+                embed.add_field(name="__Team A__", value=f"**{nl.join(msg1)}**", inline=True)
+                embed.add_field(name="__Team B__", value=f"**{nl.join(msg2)}**", inline=True)
+                embed.add_field(name="__Team C__", value=f"**{nl.join(msg3)}**", inline=True)
+                await message.channel.send(embed=embed)
             
             elif(numteams == 2):
-                msg = names[:3]
-                msg = " ".join(msg)
-                await message.channel.send(msg)
-                msg = names[3:]
-                msg = " ".join(msg)
-                await message.channel.send(msg)
+                msg1 = names[:4]
+                msg2 = names[4:]
+                embed = discord.Embed(
+                title = "Teams Generated\n",
+                colour = discord.Colour.blue()
+                )
+                nl = "\n"
+                embed.add_field(name="__Team A__", value=f"**{nl.join(msg1)}**", inline=True)
+                embed.add_field(name="__Team B__", value=f"**{nl.join(msg2)}**", inline=True)
+                await message.channel.send(embed=embed)
                 
             else:
                 msg = " ".join(names)
@@ -133,7 +151,6 @@ async def on_voice_state_update(member, before, after):
     channel = client.get_channel(443835387438301196)
     if before.channel is None and after.channel is not None:
         await channel.send('Welcome, ' + random.choice(tuple(s)).capitalize())
-
 
 @client.event
 async def on_ready():
