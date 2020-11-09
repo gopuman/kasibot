@@ -12,7 +12,7 @@ TOKEN = environ["API_KEY"]
 
 n = ['anishkasi', 'Wolfinthehouse', 'pindabc', 'aprbhd', 'the_week', 'JakeSuli', 'gopuman', 'akshara', 'greybeard278', 'Dobby']
 nicknames = {
-        'anishkasi': set(['kasi','anishkasi','kass','kmaams','lebron']),
+        'anishkasi': set(['kasi','anishkasi','kass','kmaams','lebron','dumbbitch!']),
         'Wolfinthehouse': set(['neil','pratith','juice','Wolfinthehouse','neilesh','benadryl']),
         'pindabc': set(['pinds','yogesh','dips','pindabc','upsc','nipflix']),
         'aprbhd' : set(['apar','jose','aprbhd','apr','appameya']),
