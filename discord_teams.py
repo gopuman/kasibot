@@ -117,7 +117,7 @@ async def on_message(message):
             if(numteams == 3):
                 msg1 = names[0:3]
                 msg2 = names[3:6]
-                msg3 = names[6:9]
+                msg3 = names[6:]
                 embed = discord.Embed(
                 title = "Teams Generated\n",
                 colour = discord.Colour.blue()
@@ -129,8 +129,8 @@ async def on_message(message):
                 await message.channel.send(embed=embed)
             
             elif(numteams == 2):
-                msg1 = names[:4]
-                msg2 = names[4:]
+                msg1 = names[:len(names)/2]
+                msg2 = names[len(names)/2:]
                 embed = discord.Embed(
                 title = "Teams Generated\n",
                 colour = discord.Colour.blue()
