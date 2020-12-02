@@ -14,14 +14,14 @@ n = ['anishkasi', 'Wolfinthehouse', 'pindabc', 'aprbhd', 'the_week', 'JakeSuli',
 nicknames = {
         'anishkasi': set(['kasi','anishkasi','kass','kmaams','lebron','dumbbitch!']),
         'Wolfinthehouse': set(['neil','pratith','juice','Wolfinthehouse','neilesh','benadryl']),
-        'pindabc': set(['pinds','yogesh','dips','pindabc','upsc','nipflix']),
-        'aprbhd' : set(['apar','jose','aprbhd','apr','appameya']),
-        'the_week' : set(['aveek','tupperware','shelly','pt','anxx','telegram','tacobell','tapori']),
+        'pindabc': set(['pinds','yogesh','dips','pindabc','upsc','nipflix','slum','pinpin','shettup']),
+        'aprbhd' : set(['apar','jose','aprbhd','apr','appameya','pspr','onlyfans']),
+        'the_week' : set(['aveek','tupperware','shelly','pt','anxx','telegram','tacobell','tapori','0.5']),
         'JakeSuli' : set(['arvi','ssr','ronnie','jakesuli']),
-        'gopuman': set(['gops','chilly','gopuman']),
-        'akshara': set(['akshara','hak','omg']),
-        'greybeard278': set(['paro','greybeard278','parz','yawn']), # gops add some funny nickname for me and paro  and others also if you can
-        'Dobby': set(['dobby','kuneil','dpdp','google']),
+        'gopuman': set(['gops','chilly','gopuman','gaypal','gropu']),
+        'akshara': set(['akshara','hak','omg','audible','HD']),
+        'greybeard278': set(['paro','greybeard278','parz','yawn','disgu','sd']), # gops add some funny nickname for me and paro  and others also if you can
+        'Dobby': set(['dobby','kuneil','dpdp','google','dobamma']),
         }
 
 weights = {
