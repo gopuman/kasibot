@@ -22,7 +22,7 @@ nicknames = {
         'akshara': set(['akshara','hak','omg','audible','HD']),
         'greybeard278': set(['paro','greybeard278','parz','yawn','disgu','sd']), # gops add some funny nickname for me and paro  and others also if you can
         'Dobby': set(['dobby','kuneil','dpdp','google','dobamma']),
-        'disza': set(['DMaams','Disha','D','Disza','DishArvs'])
+        'disza': set(['DMaams','Disha','D','Disza','DishArvs','lilfuq'])
         }
 
 weights = {
