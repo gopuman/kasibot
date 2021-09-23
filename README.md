@@ -5,5 +5,5 @@ A discord bot that allows to randomize team making, now also with weighted avera
 Contributors
 | Name | Github Profile |
 |------|----------------|
-|  Gopal Nambiar  |  https://github.com/gopuman |
-|  Anish Kasi     |   https://github.com/anishkasi|
+|  Gopal Nambiar  |  Gopuman(https://github.com/gopuman) |
+|  Anish Kasi     |  AnishKasi(https://github.com/anishkasi)|
